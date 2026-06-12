@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/github-banner.png" alt="Arun Xavier Banner" width="100%">
+</p>
+
 # Hi 👋 I'm Arun Xavier
 
 ### ⚡ Assistant Professor | Researcher | AI Enthusiast | Content Creator
