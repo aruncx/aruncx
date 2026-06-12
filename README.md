@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/github-banner.png" alt="Arun Xavier Banner" width="100%">
+<img src="https://github.com/aruncx/aruncx/blob/main/images/github-banner.png">
 </p>
 
 # Hi 👋 I'm Arun Xavier
