@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
-"""Refresh the profile README project showcase and recent public activity."""
+"""Update the profile README with public repositories and recent public activity."""
 
 import html
 import os
 import re
-import requests
 from pathlib import Path
+
+import requests
 
 USERNAME = os.getenv("GITHUB_USERNAME", "aruncx")
 TOKEN = os.getenv("GITHUB_TOKEN")
@@ -20,59 +21,43 @@ if TOKEN:
     HEADERS["Authorization"] = f"Bearer {TOKEN}"
 
 
-def github_get(url, params=None):
-    response = requests.get(url, headers=HEADERS, params=params, timeout=30)
+def github_get(endpoint, params=None):
+    response = requests.get(endpoint, headers=HEADERS, params=params, timeout=30)
     response.raise_for_status()
     return response.json()
 
 
 def safe(value):
-    """Escape text for safe display in a README table/list."""
     return html.escape(str(value or "")).replace("|", r"\|").replace("\n", " ")
 
 
-def update_or_append_section(readme_text, section_name, heading, body):
-    """Update a marked section, or append it if the markers do not exist yet."""
-    start_marker = f"<!-- {section_name}:START -->"
-    end_marker = f"<!-- {section_name}:END -->"
-
-    has_start = start_marker in readme_text
-    has_end = end_marker in readme_text
-
-    if has_start and has_end:
-        pattern = re.compile(
-            re.escape(start_marker) + r".*?" + re.escape(end_marker),
-            flags=re.DOTALL,
-        )
-        replacement = f"{start_marker}\n{body}\n{end_marker}"
-        return pattern.sub(lambda _: replacement, readme_text, count=1)
-
-    if has_start != has_end:
+def replace_section(content, section_name, body):
+    start = f"<!-- {section_name}:START -->"
+    end = f"<!-- {section_name}:END -->"
+    if start not in content or end not in content:
         raise RuntimeError(
-            f"README.md has only one marker for {section_name}. "
-            f"Add both {start_marker} and {end_marker}, or remove the incomplete marker."
+            f"Missing README markers for {section_name}. "
+            f"Both {start} and {end} must exist."
         )
+    pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
+    replacement = f"{start}\n{body}\n{end}"
+    updated, count = pattern.subn(lambda _: replacement, content, count=1)
+    if count != 1:
+        raise RuntimeError(f"Could not update README section: {section_name}")
+    return updated
 
-    section = f"\n\n## {heading}\n\n{start_marker}\n{body}\n{end_marker}\n"
-    return readme_text.rstrip() + section
 
-
-def build_projects():
+def make_project_table():
     repos = github_get(
         f"{API}/users/{USERNAME}/repos",
         {"per_page": 100, "sort": "updated", "type": "owner"},
     )
     repos = [
         repo for repo in repos
-        if not repo.get("fork")
-        and not repo.get("archived")
-        and not repo.get("private")
+        if not repo.get("fork") and not repo.get("archived") and not repo.get("private")
     ]
     repos.sort(
-        key=lambda repo: (
-            repo.get("stargazers_count", 0),
-            repo.get("updated_at", ""),
-        ),
+        key=lambda repo: (repo.get("stargazers_count", 0), repo.get("updated_at", "")),
         reverse=True,
     )
 
@@ -80,13 +65,10 @@ def build_projects():
     for repo in repos[:8]:
         name = safe(repo.get("name"))
         url = repo.get("html_url", f"https://github.com/{USERNAME}")
-        description = safe(
-            repo.get("description") or "Open-source project and development work."
-        )
+        description = safe(repo.get("description") or "Open-source project and development work.")
         language = safe(repo.get("language") or "Various")
         stars = repo.get("stargazers_count", 0)
         forks = repo.get("forks_count", 0)
-
         rows.append(
             f'<tr><td width="68%"><b><a href="{url}">{name}</a></b>'
             f'<br/>{description}</td>'
@@ -95,35 +77,28 @@ def build_projects():
 
     if not rows:
         return "_No public repositories were returned by the GitHub API._"
-
     return "<table>\n" + "\n".join(rows) + "\n</table>"
 
 
-def build_activity():
+def make_activity_list():
     events = github_get(
-        f"{API}/users/{USERNAME}/events/public",
-        {"per_page": 100},
+        f"{API}/users/{USERNAME}/events/public", {"per_page": 100}
     )
-
     lines = []
     for event in events:
         event_type = event.get("type", "")
         repo = event.get("repo", {}).get("name", "")
-        created = event.get("created_at", "")[:10]
+        date = event.get("created_at", "")[:10]
         payload = event.get("payload", {})
 
         if event_type == "PushEvent":
-            count = len(payload.get("commits", []))
-            detail = f"Pushed {count} commit(s)"
+            detail = f"Pushed {len(payload.get('commits', []))} commit(s)"
         elif event_type == "PullRequestEvent":
-            action = payload.get("action", "updated")
-            detail = f"{action.title()} a pull request"
+            detail = f"{payload.get('action', 'updated').title()} a pull request"
         elif event_type == "IssuesEvent":
-            action = payload.get("action", "updated")
-            detail = f"{action.title()} an issue"
+            detail = f"{payload.get('action', 'updated').title()} an issue"
         elif event_type == "CreateEvent":
-            ref_type = payload.get("ref_type", "a resource")
-            detail = f"Created {ref_type}"
+            detail = f"Created {payload.get('ref_type', 'a resource')}"
         elif event_type == "ReleaseEvent":
             detail = "Published a release"
         elif event_type == "WatchEvent":
@@ -133,12 +108,11 @@ def build_activity():
 
         if repo:
             lines.append(
-                f"- **{created}** · {detail} in "
+                f"- **{date}** · {detail} in "
                 f"[`{safe(repo)}`](https://github.com/{repo})"
             )
         else:
-            lines.append(f"- **{created}** · {detail}")
-
+            lines.append(f"- **{date}** · {detail}")
         if len(lines) >= 7:
             break
 
@@ -147,33 +121,17 @@ def build_activity():
             "_No recent public events are available yet. "
             "Private activity is not exposed by this public endpoint._"
         )
-
     return "\n".join(lines)
 
 
 def main():
-    if not README.exists():
+    if not README.is_file():
         raise FileNotFoundError("README.md was not found in the repository root.")
-
-    readme_text = README.read_text(encoding="utf-8")
-    projects_md = build_projects()
-    activity_md = build_activity()
-
-    readme_text = update_or_append_section(
-        readme_text,
-        "PROJECTS",
-        "🚀 Automatically Updated Projects",
-        projects_md,
-    )
-    readme_text = update_or_append_section(
-        readme_text,
-        "ACTIVITY",
-        "⚡ Recent GitHub Activity",
-        activity_md,
-    )
-
-    README.write_text(readme_text.rstrip() + "\n", encoding="utf-8")
-    print("README project showcase and recent public activity refreshed successfully.")
+    content = README.read_text(encoding="utf-8")
+    content = replace_section(content, "PROJECTS", make_project_table())
+    content = replace_section(content, "ACTIVITY", make_activity_list())
+    README.write_text(content.rstrip() + "\n", encoding="utf-8")
+    print("README project showcase and recent public activity updated successfully.")
 
 
 if __name__ == "__main__":
