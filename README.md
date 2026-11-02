@@ -1,227 +1,258 @@
-<p align="center">
-<img src="https://github.com/aruncx/aruncx/blob/main/images/github-banner.png">
+<!--
+  Profile README for @aruncx
+  Updated: November 2026
+  Tip: Keep the profile repository name exactly "aruncx" and this file as README.md.
+-->
+
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0F172A,35:164E63,70:0E7490,100:22D3EE&height=220&section=header&text=ARUN%20XAVIER&fontSize=48&fontColor=FFFFFF&fontAlignY=38&desc=Engineering%20%7C%20Research%20%7C%20AI%20%7C%20Innovation&descAlignY=60&descSize=17&animation=fadeIn" width="100%" alt="Arun Xavier profile banner"/>
+
+<a href="https://readme-typing-svg.demolab.com">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=19&duration=2800&pause=900&color=0891B2&center=true&vCenter=true&width=800&lines=Assistant+Professor+%7C+EEE;Power+Electronics+%26+Energy+Systems;AI-powered+Academic+Tools+%26+Automation;Building+useful+technology+for+education" alt="Typing introduction"/>
+</a>
+
+<p>
+  <a href="https://aruncx.github.io/aruncx/"><img src="https://img.shields.io/badge/Portfolio-Visit%20Website-0E7490?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Portfolio"/></a>
+  <a href="https://github.com/aruncx"><img src="https://img.shields.io/badge/GitHub-aruncx-181717?style=for-the-badge&logo=github" alt="GitHub"/></a>
+  <a href="https://www.linkedin.com/in/aruncx/"><img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"/></a>
+  <a href="https://www.youtube.com/@arunxaviertech"><img src="https://img.shields.io/badge/YouTube-Arun%20Xavier%20Tech-FF0000?style=for-the-badge&logo=youtube" alt="YouTube"/></a>
+  <a href="https://scholar.google.com/citations?user=hjOMPOwAAAAJ"><img src="https://img.shields.io/badge/Google%20Scholar-Research-4285F4?style=for-the-badge&logo=googlescholar" alt="Google Scholar"/></a>
 </p>
 
-# Hi 👋 I'm Arun Xavier
 
-### ⚡ Assistant Professor | Researcher | AI Enthusiast | Content Creator
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=24&duration=3000&pause=1000&center=true&vCenter=true&width=900&lines=Electrical+%26+Electronics+Engineering;Power+Electronics+Researcher;AI+for+Engineering+Education;Battery+Technology+Explorer;YouTube+Educator;Lifelong+Learner" />
+
+
+</div>
+
+👋 About Me
+
+I'm Arun Xavier, an Assistant Professor (Senior Grade) in Electrical & Electronics Engineering at Vidya Academy of Science & Technology (VAST), Thrissur, Kerala, India.
+
+With 11+ years of teaching experience, I work at the intersection of engineering, research and practical technology development. I enjoy creating digital tools that simplify academic workflows, improve access to learning resources and make institutional data easier to understand.
+
+🎓 Electrical & Electronics Engineering educator and student project mentor
+
+🔬 Research interests in power electronics, battery technology, EVs and renewable energy
+
+🤖 Exploring Generative AI, Machine Learning and AI-enabled engineering education
+
+💻 Building web applications, dashboards and automation tools for real-world use
+
+📚 Supporting research communication, LaTeX, technical documentation and academic learning
+
+🌱 Interested in translating emerging technologies into useful solutions
+
+My approach: Learn continuously. Build practically. Share knowledge. Create meaningful impact.
+
+🎯 Focus Areas
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+⚡ Electrical & Energy Engineering
+
+Power electronic converters and inverters
+
+Battery technologies and Battery Management Systems
+
+Electric vehicles and energy storage
+
+Renewable energy and solar PV systems
+
+Smart grids, energy monitoring and analytics
+
+MATLAB / Simulink-based engineering studies
+
+</td>
+<td width="50%" valign="top">
+
+🤖 Digital Technology & Education
+
+Generative AI and AI-assisted workflows
+
+Academic analytics and student performance tools
+
+Web application development
+
+Educational technology and digital learning
+
+Automation, data visualization and dashboards
+
+LaTeX, Overleaf and research documentation
+
+</td>
+</tr>
+</table>
+
+🚀 Featured Projects
+
+The project cards below are automatically refreshed every day from your public GitHub repositories. Repositories are ranked by stars, with forks excluded.
+
+<!-- PROJECTS:START -->
+
+Project showcase will populate automatically after the Refresh profile content workflow runs.
+
+<!-- PROJECTS:END -->
+
+Explore all repositories: github.com/aruncx?tab=repositories.
+
+🧰 Technology Stack
+
+Programming & Web Development
+
+<p>
+<img src="https://skillicons.dev/icons?i=python,c,js,ts,html,css,react,nextjs,nodejs,tailwind,vite" alt="Programming and web technologies"/>
 </p>
 
----
+Engineering, Simulation & Embedded Systems
 
-## 🚀 About Me
-
-🎓 Assistant Professor in Electrical & Electronics Engineering
-
-🏛️ Vidya Academy of Science & Technology (VAST), Thrissur
-
-📚 11+ Years of Teaching Experience
-
-🔬 Active Researcher in
-
-* Power Electronics
-* Renewable Energy Systems
-* Battery Technologies
-* Electric Vehicles
-* Artificial Intelligence Applications
-* Engineering Education Technologies
-
-🎥 Creator of **Arun Xavier Tech**
-
-Sharing engineering tutorials, LaTeX training, AI tools, KTU learning resources, and technology content.
-
----
-
-## 🌟 Professional Highlights
-
-* Published Research Articles in International Journals
-* Google Scholar Indexed Researcher
-* FDP Resource Person
-* LaTeX Trainer
-* Academic Analytics Developer
-* Student Project Mentor
-* AI Advocate in Engineering Education
-
----
-
-## 🔬 Research Interests
-
-```text
-Power Electronics
-Battery Management Systems
-Electric Vehicles
-Artificial Intelligence
-Machine Learning
-Renewable Energy Systems
-Smart Grid Technologies
-IoT Applications
-Engineering Education
-Academic Analytics
-```
-
----
-
-## 💻 Technical Skills
-
-### Programming
-
-* Python
-* MATLAB
-* C Programming
-
-### Engineering Software
-
-* MATLAB / Simulink
-* LTspice
-* PSCAD
-* ETAP
-* Arduino IDE
-* Proteus
-* AutoCAD
-
-### Research & Documentation
-
-* LaTeX
-* Overleaf
-* Research Writing
-* Technical Documentation
-
-### AI & Data
-
-* ChatGPT
-* Google Gemini
-* Prompt Engineering
-* Educational AI
-* Data Analytics
-
----
-
-## 📈 GitHub Analytics
-
-<p align="center">
-
-<img height="170" src="https://github-readme-stats.vercel.app/api?username=aruncx&show_icons=true&theme=tokyonight"/>
-
-<img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aruncx&layout=compact&theme=tokyonight"/>
-
+<p>
+<img src="https://img.shields.io/badge/MATLAB-FF8000?style=for-the-badge&logo=mathworks&logoColor=white" alt="MATLAB"/>
+<img src="https://img.shields.io/badge/Simulink-0076A8?style=for-the-badge&logo=mathworks&logoColor=white" alt="Simulink"/>
+<img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino"/>
+<img src="https://img.shields.io/badge/LTspice-Engineering-blue?style=for-the-badge" alt="LTspice"/>
+<img src="https://img.shields.io/badge/Proteus-Design-informational?style=for-the-badge" alt="Proteus"/>
+<img src="https://img.shields.io/badge/ETAP-Power%20Systems-005A9C?style=for-the-badge" alt="ETAP"/>
 </p>
 
-<p align="center">
-<img src="https://streak-stats.demolab.com?user=aruncx&theme=tokyonight"/>
+AI, Data & Productivity
+
+<p>
+<img src="https://img.shields.io/badge/Generative%20AI-Exploring-8A2BE2?style=for-the-badge" alt="Generative AI"/>
+<img src="https://img.shields.io/badge/ChatGPT-AI-74AA9C?style=for-the-badge&logo=openai&logoColor=white" alt="ChatGPT"/>
+<img src="https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge&logo=googlegemini&logoColor=white" alt="Google Gemini"/>
+<img src="https://img.shields.io/badge/Excel-Data%20Analysis-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="Excel"/>
+<img src="https://img.shields.io/badge/Google%20Apps%20Script-Automation-4285F4?style=for-the-badge&logo=googleappsscript&logoColor=white" alt="Apps Script"/>
 </p>
 
----
+Tools & Platforms
 
-## 🎥 Arun Xavier Tech
+<p>
+<img src="https://skillicons.dev/icons?i=git,github,vscode,vercel,linux,firebase,latex" alt="Tools and platforms"/>
+<img src="https://img.shields.io/badge/Overleaf-LaTeX-47A141?style=for-the-badge&logo=overleaf&logoColor=white" alt="Overleaf"/>
+</p>
+
+📊 GitHub Analytics
+
+<div align="center">
+  <img height="165" src="https://github-readme-stats.vercel.app/api?username=aruncx&show_icons=true&theme=tokyonight&hide_border=true&rank_icon=github&include_all_commits=true" alt="GitHub statistics"/>
+  <img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=aruncx&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" alt="Top languages"/>
+</div>
+
+<div align="center">
+  <img src="https://streak-stats.demolab.com?user=aruncx&theme=tokyonight&hide_border=true" alt="GitHub contribution streak"/>
+</div>
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/aruncx/aruncx/main/github-metrics.svg" alt="Detailed GitHub metrics" width="100%"/>
+</div>
+
+
+
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=aruncx&theme=tokyo-night&hide_border=true&area=true" width="98%" alt="Contribution activity graph"/>
+</div>
+
+🐍 Contribution Journey
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/aruncx/aruncx/output/github-contribution-grid-snake-dark.svg"/>
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/aruncx/aruncx/output/github-contribution-grid-snake.svg"/>
+    <img alt="Animated GitHub contribution snake" src="https://raw.githubusercontent.com/aruncx/aruncx/output/github-contribution-grid-snake.svg" width="100%"/>
+  </picture>
+</div>
+
+To enable the snake animation, add the GitHub Actions workflow described below. Until the workflow runs successfully, this image may not appear.
+
+⚡ Recent GitHub Activity
+
+<!-- ACTIVITY:START -->
+
+Recent public GitHub activity will appear here after the Refresh profile content workflow runs.
+
+<!-- ACTIVITY:END -->
+
+🎥 Arun Xavier Tech
 
 Engineering education meets technology.
 
-### Featured Topics
+I share and explore content related to:
 
-* Artificial Intelligence
-* ChatGPT & Gemini
-* LaTeX Tutorials
-* KTU Engineering Subjects
-* MATLAB Simulations
-* Power Electronics
-* Educational Technology
-* Productivity Tools
+Artificial Intelligence, ChatGPT and Google Gemini
 
-📺 YouTube:
-https://www.youtube.com/@arunxaviertech
+LaTeX, Overleaf and research paper preparation
 
----
+KTU engineering subjects and learning resources
 
-## 📚 Research Profile
+MATLAB simulations and power electronics
 
-### Google Scholar
+Educational technology and productivity tools
 
-Research publications focusing on:
+▶️ Visit Arun Xavier Tech on YouTube
 
-* Power Electronics
-* Renewable Energy
-* Engineering Applications
-* Emerging Technologies
+🔬 Research & Academic Interests
 
-Scholar Profile:
-https://scholar.google.com/citations?user=hjOMPOwAAAAJ
+Power electronic converters, inverters and motor drives
 
----
+Battery technologies, battery monitoring and energy storage
 
-## 🚀 Featured Projects
+Electric vehicles and sustainable mobility
 
-### 📊 KTU Result Analytics Platform
+Renewable energy systems and solar power applications
 
-A comprehensive academic analytics system providing:
+Smart grid technologies and energy management
 
-* SGPA Analysis
-* CGPA Tracking
-* Student Performance Reports
-* Department Analytics
-* Excel Automation
+AI and Machine Learning applications in engineering
 
----
+Engineering education, academic analytics and digital assessment
 
-### 🤖 AI for Education
+📖 Google Scholar Profile
 
-Tools and experiments integrating Generative AI into:
+🌱 Currently Exploring
 
-* Teaching
-* Assessment
-* Academic Administration
-* Research Assistance
+Agentic AI and AI-assisted software development
 
----
+AI applications in engineering teaching and research
 
-### ⚡ Power Electronics Simulations
+Intelligent energy monitoring and analytics
 
-Simulation models and educational resources related to:
+Battery analytics and smart energy systems
 
-* Converters
-* Inverters
-* Motor Drives
-* Renewable Energy Systems
+Modern web technologies and automation
 
----
+Open-source tools for academic productivity
 
-### 🔋 Battery & EV Research
+🌐 Personal Portfolio
 
-Projects related to:
+Explore my academic profile, engineering interests, selected digital projects and learning resources in one place.
 
-* Battery Monitoring
-* EV Technologies
-* Energy Storage
-* Sustainable Mobility
+<div align="center">
+  <a href="https://aruncx.github.io/aruncx/">
+    <img src="https://img.shields.io/badge/OPEN%20MY%20PORTFOLIO-Explore%20Website-0E7490?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open personal portfolio"/>
+  </a>
+</div>
 
----
+🤝 Connect & Collaborate
 
-## 🌱 Currently Learning
+<div align="center">
+  <a href="https://www.linkedin.com/in/aruncx/"><img src="https://img.shields.io/badge/LinkedIn-Arun%20Xavier-0A66C2?style=for-the-badge&logo=linkedin" alt="LinkedIn"/></a>
+  <a href="https://www.youtube.com/@arunxaviertech"><img src="https://img.shields.io/badge/YouTube-Arun%20Xavier%20Tech-FF0000?style=for-the-badge&logo=youtube" alt="YouTube"/></a>
+  <a href="https://scholar.google.com/citations?user=hjOMPOwAAAAJ"><img src="https://img.shields.io/badge/Google%20Scholar-Profile-4285F4?style=for-the-badge&logo=googlescholar" alt="Google Scholar"/></a>
+  <a href="https://github.com/aruncx"><img src="https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github" alt="GitHub"/></a>
+</div>
 
-* Advanced AI Systems
-* Agentic AI
-* Battery Analytics
-* Explainable AI
-* AI for Engineering Research
+I'm interested in connecting with educators, researchers, developers and technology enthusiasts working in AI, power electronics, energy systems, educational technology and open-source projects.
 
----
+<div align="center">
 
-## 🌐 Connect With Me
+💡 Engineering the Future Through Research, AI & Innovation
 
-LinkedIn:
-https://www.linkedin.com/in/aruncx/
+Thanks for visiting my profile. Keep learning, keep building, and keep sharing!
 
-Google Scholar:
-https://scholar.google.com/citations?user=hjOMPOwAAAAJ
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:22D3EE,50:0E7490,100:0F172A&height=110&section=footer" width="100%" alt="Footer banner"/>
 
-YouTube:
-https://www.youtube.com/@arunxaviertech
-
-GitHub:
-https://github.com/aruncx
-
----
-
-### 💡 Engineering the Future through Research, Artificial Intelligence, and Innovation
+</div>
