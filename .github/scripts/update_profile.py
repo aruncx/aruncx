@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh the profile README project showcase and recent public activity."""
+"""Refresh the profile README project showcase and recent public activity.""" 
 import os
 import re
 import html
