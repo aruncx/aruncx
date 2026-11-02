@@ -23,6 +23,8 @@ jobs:
           user: aruncx
           filename: github-metrics.svg
 
+          config_display: large
+
           output_action: commit
           committer_branch: main
           committer_message: "Update GitHub Metrics [Skip GitHub Action]"
