@@ -1,29 +1,22 @@
-# GitHub Profile Upgrade Pack — November 2026
+# GitHub metrics fix for @aruncx
 
-## Files included
-- `README.md` — updated profile README with dynamic sections and portfolio link.
-- `.github/workflows/contribution-snake.yml` — daily animated contribution snake, published to the `output` branch.
-- `.github/workflows/github-metrics.yml` — daily advanced metrics SVG.
-- `.github/workflows/update-profile-content.yml` — daily refresh of repository showcase and recent public activity.
-- `.github/scripts/update_profile.py` — script that fetches your public repositories and public events from GitHub.
-- `index.html` — standalone personal portfolio landing page.
+## Files
+- `README.md` — updated profile README. Replaces broken third-party statistics and activity graph images with a repository-hosted `github-metrics.svg`.
+- `.github/workflows/github-metrics.yml` — generates and commits `github-metrics.svg` daily.
 
 ## Install
-1. Open your profile repository: https://github.com/aruncx/aruncx
-2. Upload/replace the files and folders from this pack, preserving the folder structure.
-3. In **Settings → Actions → General**, allow GitHub Actions and read/write permissions for workflows.
-4. In **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
-5. Your portfolio URL will be: https://aruncx.github.io/aruncx/
-6. Open **Actions** and manually run each workflow once:
-   - Generate contribution snake
-   - Update GitHub metrics
-   - Refresh profile content
+1. Replace the root `README.md` in `aruncx/aruncx` with this package's `README.md`.
+2. Create `.github/workflows/github-metrics.yml` and paste the included workflow.
+3. In the repository, open Settings → Actions → General → Workflow permissions.
+4. Select **Read and write permissions**, then save.
+5. Open Actions → Generate GitHub profile metrics → Run workflow.
+6. Wait for the workflow to finish. It should commit `github-metrics.svg` to the `main` branch.
+7. Refresh your profile README.
+
+The workflow uses the built-in `GITHUB_TOKEN` and requests repository write permission. If GitHub rejects a permission or API request, inspect the exact failed step before changing token scopes. Do not publish a personal access token in README or commit it to the repository.
 
 ## Notes
-- The contribution snake is published to the `output` branch; do not delete that branch after the first successful run.
-- The project showcase lists your public, non-forked, non-archived repositories and sorts them by stars. It refreshes daily.
-- Recent activity uses GitHub's public events API. It cannot display private activity and GitHub may return only a limited recent event window.
-- The metrics workflow writes `github-metrics.svg` to the repository root.
-- If your repository's default branch is not `main`, update the workflow references/Pages branch accordingly.
-- If GitHub Actions fails to push, check **Settings → Actions → General → Workflow permissions → Read and write permissions**.
-- External SVG/stat services can occasionally be rate-limited or temporarily unavailable; the locally generated metrics SVG reduces dependence on third-party README-stat hosts.
+- The generated SVG is stored in your own repository, reducing dependence on public stats-card hosting services.
+- The existing contribution streak image is retained because it was displaying in your screenshot.
+- Your existing project showcase/activity workflow and contribution-snake workflow are not replaced by this package.
+- The workflow uses `lowlighter/metrics@latest`; the Metrics project documents its plugins and output-to-commit feature in its official repository.
