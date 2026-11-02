@@ -128,7 +128,11 @@ Explore all repositories: [github.com/aruncx?tab=repositories](https://github.co
 The analytics dashboard below is generated and stored in this repository by GitHub Actions. It includes profile statistics, language insights, contribution calendar, coding habits and recent activity. The image is served from this repository rather than a third-party statistics host.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/aruncx/aruncx/main/github-metrics.svg" alt="GitHub Analytics Dashboard" width="480"/>
+  <img
+    src="https://raw.githubusercontent.com/aruncx/aruncx/main/github-metrics.svg"
+    alt="GitHub Analytics Dashboard"
+    width="78%"
+  />
 </div>
 
 <div align="center">
