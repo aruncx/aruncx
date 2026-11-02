@@ -1,86 +1,65 @@
-#!/usr/bin/env python3
-"""Refresh the profile README project showcase and recent public activity.""" 
-import os
-import re
-import html
-import requests
-from pathlib import Path
+name: Refresh GitHub Profile Content
 
-USERNAME = os.getenv("GITHUB_USERNAME", "aruncx")
-TOKEN = os.getenv("GITHUB_TOKEN")
-README = Path("README.md")
-API = "https://api.github.com"
-headers = {"Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"}
-if TOKEN:
-    headers["Authorization"] = f"Bearer {TOKEN}"
+on:
+  schedule:
+    # Automatically update every day at 00:00 UTC
+    - cron: "0 0 * * *"
 
-def get(url, params=None):
-    response = requests.get(url, headers=headers, params=params, timeout=30)
-    response.raise_for_status()
-    return response.json()
+  workflow_dispatch:
 
-def safe(value):
-    return html.escape(str(value or "")).replace("|", r"\|").replace("\n", " ")
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/scripts/update_profile.py'
+      - '.github/workflows/update-profile-content.yml'
 
-def update_section(text, name, body):
-    pattern = rf"(<!-- {name}:START -->).*?(<!-- {name}:END -->)"
-    replacement = rf"\1\n{body}\n\2"
-    updated, count = re.subn(pattern, lambda m: f"{m.group(1)}\n{body}\n<!-- {name}:END -->", text, flags=re.S)
-    if not count:
-        raise RuntimeError(f"Could not find {name} markers in README.md")
-    return updated
+permissions:
+  contents: write
 
-repos = get(f"{API}/users/{USERNAME}/repos", {"per_page": 100, "sort": "updated", "type": "owner"})
-repos = [r for r in repos if not r.get("fork") and not r.get("archived") and not r.get("private")]
-repos.sort(key=lambda r: (r.get("stargazers_count", 0), r.get("updated_at", "")), reverse=True)
-cards = []
-for repo in repos[:8]:
-    name = safe(repo["name"])
-    url = repo["html_url"]
-    description = safe(repo.get("description") or "Open-source project and development work.")
-    language = safe(repo.get("language") or "Various")
-    stars = repo.get("stargazers_count", 0)
-    forks = repo.get("forks_count", 0)
-    cards.append(
-        f'<tr><td width="68%"><b><a href="{url}">{name}</a></b><br/>{description}</td>'
-        f'<td align="center">{language}<br/>⭐ {stars} · 🍴 {forks}</td></tr>'
-    )
-project_md = (
-    '<table>\n' + "\n".join(cards) + '\n</table>'
-    if cards else "_No public repositories were returned by the GitHub API._"
-)
+jobs:
+  refresh:
+    name: Update Projects and Recent Activity
+    runs-on: ubuntu-latest
 
-events = get(f"{API}/users/{USERNAME}/events/public", {"per_page": 100})
-activity_lines = []
-for event in events:
-    typ = event.get("type", "")
-    repo = event.get("repo", {}).get("name", "")
-    created = event.get("created_at", "")[:10]
-    payload = event.get("payload", {})
-    if typ == "PushEvent":
-        count = len(payload.get("commits", []))
-        detail = f"Pushed {count} commit(s)"
-    elif typ == "PullRequestEvent":
-        action = payload.get("action", "updated")
-        detail = f"{action.title()} a pull request"
-    elif typ == "IssuesEvent":
-        detail = f"{payload.get('action', 'updated').title()} an issue"
-    elif typ == "CreateEvent":
-        detail = f"Created {payload.get('ref_type', 'a resource')}"
-    elif typ == "ReleaseEvent":
-        detail = f"Published a release ({payload.get('action', 'published')})"
-    elif typ == "WatchEvent":
-        detail = "Starred a repository"
-    else:
-        continue
-    activity_lines.append(f"- **{created}** · {detail} in [`{safe(repo)}`](https://github.com/{repo})")
-    if len(activity_lines) == 7:
-        break
+    steps:
 
-activity_md = "\n".join(activity_lines) if activity_lines else "_No recent public events are available yet. Private activity is not exposed by this public endpoint._"
+      # 1. Checkout repository
+      - name: Check out profile repository
+        uses: actions/checkout@v4
 
-text = README.read_text(encoding="utf-8")
-text = update_section(text, "PROJECTS", project_md)
-text = update_section(text, "ACTIVITY", activity_md)
-README.write_text(text, encoding="utf-8")
-print("README project showcase and recent activity refreshed.")
+      # 2. Configure Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      # 3. Install required dependencies
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install requests
+
+      # 4. Refresh GitHub projects and activity
+      - name: Refresh project showcase and recent activity
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USERNAME: aruncx
+        run: |
+          python .github/scripts/update_profile.py
+
+      # 5. Commit updated README
+      - name: Commit updated profile sections
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Update GitHub profile projects and activity"
+            git push
+          else
+            echo "No README changes detected."
+          fi
