@@ -78,10 +78,10 @@ The project cards below are **automatically refreshed every day** from your publ
 
 <!-- PROJECTS:START -->
 <table>
-<tr><td width="68%"><b><a href="https://github.com/aruncx/aruncx">aruncx</a></b><br/>Open-source project and development work.</td><td align="center">HTML<br/>⭐ 0 · 🍴 0</td></tr>
-<tr><td width="68%"><b><a href="https://github.com/aruncx/ktumarksfiller">ktumarksfiller</a></b><br/>Quick Utility for Faculty: KTU Marks &amp; Attendance Auto-Filler</td><td align="center">HTML<br/>⭐ 0 · 🍴 0</td></tr>
-<tr><td width="68%"><b><a href="https://github.com/aruncx/seriesanalysis">seriesanalysis</a></b><br/>Browser-based analytics for series-test results: compare Series I/II/III, find students who need academic support, plan remedial action, and export designed PDF and Excel reports. Private - runs entirely in your browser. By Arun Xavier, Dept. of EEE, Vidya Academy of Science &amp; Technology.</td><td align="center">HTML<br/>⭐ 0 · 🍴 0</td></tr>
 <tr><td width="68%"><b><a href="https://github.com/aruncx/vasteledata">vasteledata</a></b><br/>Live electricity dashboard for VAST, Thrissur: DG sets, solar plants and KSEB import/export, tariff zones, MD charges, net savings and solar impact. Updates automatically from a Google Sheet.</td><td align="center">HTML<br/>⭐ 0 · 🍴 0</td></tr>
+<tr><td width="68%"><b><a href="https://github.com/aruncx/ktumarksfiller">ktumarksfiller</a></b><br/>Quick Utility for Faculty: KTU Marks &amp; Attendance Auto-Filler</td><td align="center">JavaScript<br/>⭐ 0 · 🍴 0</td></tr>
+<tr><td width="68%"><b><a href="https://github.com/aruncx/aruncx">aruncx</a></b><br/>Open-source project and development work.</td><td align="center">HTML<br/>⭐ 0 · 🍴 0</td></tr>
+<tr><td width="68%"><b><a href="https://github.com/aruncx/seriesanalysis">seriesanalysis</a></b><br/>Browser-based analytics for series-test results: compare Series I/II/III, find students who need academic support, plan remedial action, and export designed PDF and Excel reports. Private - runs entirely in your browser. By Arun Xavier, Dept. of EEE, Vidya Academy of Science &amp; Technology.</td><td align="center">HTML<br/>⭐ 0 · 🍴 0</td></tr>
 <tr><td width="68%"><b><a href="https://github.com/aruncx/seriesseating">seriesseating</a></b><br/>Browser-based exam seating generator for the EEE Department, VAST. Upload students and a timetable, set up rooms, and get seating charts as WhatsApp images, PDF, poster or print.</td><td align="center">HTML<br/>⭐ 0 · 🍴 0</td></tr>
 <tr><td width="68%"><b><a href="https://github.com/aruncx/solarvidya">solarvidya</a></b><br/>Open-source project and development work.</td><td align="center">HTML<br/>⭐ 0 · 🍴 0</td></tr>
 <tr><td width="68%"><b><a href="https://github.com/aruncx/vasteee2024">vasteee2024</a></b><br/>A modern, mobile-friendly academic record portal for 2024 B.Tech EEE students of Vidya Academy of Science &amp; Technology. Students can securely verify their identity and view semester-wise Series 1, Series 2, and University marks, grades, SGPA, CGPA, arrears, failures, and attendance-related details.</td><td align="center">HTML<br/>⭐ 0 · 🍴 0</td></tr>
@@ -154,13 +154,13 @@ The analytics dashboard below is generated and stored in this repository by GitH
 ## ⚡ Recent GitHub Activity
 
 <!-- ACTIVITY:START -->
-- **2026-11-01** · Pushed updates in [`aruncx/ktumarksfiller`](https://github.com/aruncx/ktumarksfiller)
-- **2026-11-01** · Pushed updates in [`aruncx/ktumarksfiller`](https://github.com/aruncx/ktumarksfiller)
-- **2026-11-01** · Pushed updates in [`aruncx/ktumarksfiller`](https://github.com/aruncx/ktumarksfiller)
-- **2026-11-01** · Pushed updates in [`aruncx/seriesanalysis`](https://github.com/aruncx/seriesanalysis)
-- **2026-11-01** · Pushed updates in [`aruncx/seriesanalysis`](https://github.com/aruncx/seriesanalysis)
-- **2026-11-01** · Pushed updates in [`aruncx/ktumarksfiller`](https://github.com/aruncx/ktumarksfiller)
-- **2026-11-01** · Pushed updates in [`aruncx/ktumarksfiller`](https://github.com/aruncx/ktumarksfiller)
+- **2026-11-02** · Pushed updates in [`aruncx/aruncx`](https://github.com/aruncx/aruncx)
+- **2026-11-02** · Pushed updates in [`aruncx/aruncx`](https://github.com/aruncx/aruncx)
+- **2026-11-02** · Pushed updates in [`aruncx/aruncx`](https://github.com/aruncx/aruncx)
+- **2026-11-02** · Pushed updates in [`aruncx/aruncx`](https://github.com/aruncx/aruncx)
+- **2026-11-02** · Pushed updates in [`aruncx/aruncx`](https://github.com/aruncx/aruncx)
+- **2026-11-03** · Pushed updates in [`aruncx/ktumarksfiller`](https://github.com/aruncx/ktumarksfiller)
+- **2026-11-02** · Pushed updates in [`aruncx/ktumarksfiller`](https://github.com/aruncx/ktumarksfiller)
 <!-- ACTIVITY:END -->
 
 ## 🎥 Arun Xavier Tech
